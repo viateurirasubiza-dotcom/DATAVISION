@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWANDA SEARCH - Official Download | Desktop Search Application for Windows</title>
+    
+    <!-- SEO & Accessibility Metadata -->
+    <meta name="description" content="Official website for RWANDA SEARCH by VIATEUR HUB. Download the official 64-bit Windows desktop search application to explore information, academic tools, news, and Rwanda-focused content.">
+    <meta name="keywords" content="RWANDA SEARCH, VIATEUR HUB, Windows Desktop Search, Rwanda Information Tool, Windows App Download">
+    <meta name="author" content="VIATEUR HUB">
+    <meta name="theme-color" content="#030712">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://viateurirasubiza-dotcom.github.io/rwanda-search-website/">
+    <meta property="og:title" content="RWANDA SEARCH - Official Windows Desktop Download">
+    <meta property="og:description" content="Discover More. Search Smarter. Explore Rwanda. Download the official v1.0.0 Windows search installer by VIATEUR HUB.">
+    <meta property="og:image" content="https://placehold.co/1200x630/030712/06b6d4?text=RWANDA+SEARCH+Desktop+App">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="RWANDA SEARCH - Official Windows Desktop Download">
+    <meta property="twitter:description" content="Official Windows desktop application download for RWANDA SEARCH v1.0.0 by VIATEUR HUB.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/030712/06b6d4?text=RWANDA+SEARCH+Desktop+App">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23030712'/><path d='M30 20 L55 20 C70 20 70 45 55 45 L30 45 Z' fill='none' stroke='%2306b6d4' stroke-width='10' stroke-linejoin='round'/><path d='M42 45 L68 80' stroke='%233b82f6' stroke-width='10' stroke-linecap='round'/><circle cx='70' cy='30' r='6' fill='%2310b981'/></svg>">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#030712',
+                            900: '#0b0f19',
+                            800: '#111827',
+                            700: '#1f2937'
+                        },
+                        neon: {
+                            cyan: '#06b6d4',
+                            blue: '#3b82f6',
+                            purple: '#8b5cf6',
+                            emerald: '#10b981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Menlo', 'Monaco', 'Consolas', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Inline Styles for Animations, Glassmorphism & Custom Elements -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 5px;
+            border: 2px solid #030712;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4;
+        }
+
+        /* Glassmorphism Classes */
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            background: rgba(30, 41, 59, 0.8);
+            border-color: rgba(6, 182, 212, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(6, 182, 212, 0.15);
+        }
+
+        /* Glowing Gradients & Effects */
+        .glow-cyan {
+            box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.3);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gradient-accent {
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Ambient Glow Backgrounds */
+        .ambient-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Focus Ring Standard for Accessibility */
+        a:focus-visible, button:focus-visible, input:focus-visible {
+            outline: 2px solid #06b6d4;
+            outline-offset: 4px;
+        }
+
+        /* Respect Reduced Motion Preferences */
+        @media (prefers-reduced-motion: reduce) {
+            *, ::before, ::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-200 font-sans antialiased selection:bg-cyan-500 selection:text-black min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+
+    <!-- Ambient Glowing Background Circles -->
+    <div class="ambient-glow w-[500px] h-[500px] bg-cyan-600/10 -top-32 -left-32"></div>
+    <div class="ambient-glow w-[600px] h-[600px] bg-blue-600/10 top-1/3 -right-40"></div>
+    <div class="ambient-glow w-[400px] h-[400px] bg-purple-600/10 bottom-1/4 left-1/4"></div>
+
+    <!-- MAIN HEADER / NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo & Name -->
+                <a href="#home" class="flex items-center gap-3 group focus:outline-none">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 via-blue-600 to-purple-600 p-[2px] shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform duration-300">
+                        <div class="w-full h-full bg-navy-950 rounded-[10px] flex items-center justify-center">
+                            <!-- SVG Logo representing R & Search Lens -->
+                            <svg class="w-6 h-6 text-cyan-400 fill-current" viewBox="0 0 24 24">
+                                <path d="M4 4h7a4 4 0 0 1 4 4 4 4 0 0 1-4 4H8v6H4V4zm4 5h3a1 1 0 1 0 0-2H8v2z"/>
+                                <path d="M14.5 14.5l5 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <circle cx="13.5" cy="13.5" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-extrabold tracking-wider text-white flex items-center gap-1.5">
+                            RWANDA <span class="text-cyan-400">SEARCH</span>
+                        </span>
+                        <span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase">By VIATEUR HUB</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="#home" class="text-slate-300 hover:text-cyan-400 transition-colors py-2">Home</a>
+                    <a href="#features" class="text-slate-300 hover:text-cyan-400 transition-colors py-2">Features</a>
+                    <a href="#screenshots" class="text-slate-300 hover:text-cyan-400 transition-colors py-2">Screenshots</a>
+                    <a href="#installation" class="text-slate-300 hover:text-cyan-400 transition-colors py-2">Installation</a>
+                    <a href="#about" class="text-slate-300 hover:text-cyan-400 transition-colors py-2">About</a>
+                    <a href="#docs" class="text-slate-300 hover:text-cyan-400 transition-colors py-2">Docs & License</a>
+                </nav>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="#download" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold text-sm shadow-md shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all duration-300 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                        Download App
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-navy-900 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <svg id="hamburger-icon" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50">Home</a>
+            <a href="#features" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50">Features</a>
+            <a href="#screenshots" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50">Screenshots</a>
+            <a href="#installation" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50">Installation</a>
+            <a href="#about" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50">About</a>
+            <a href="#docs" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50">Docs & License</a>
+            <div class="pt-2">
+                <a href="#download" class="mobile-nav-link w-full text-center px-4 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-base shadow-lg block">
+                    Download for Windows v1.0.0
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        
+        <!-- HERO SECTION -->
+        <section id="home" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-4xl mx-auto space-y-6">
+                    
+                    <!-- Pill Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border border-cyan-500/30 text-xs sm:text-sm font-medium text-cyan-300 shadow-sm animate-pulse">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                        Official Desktop Release v1.0.0 is Available
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-none">
+                        Discover More. <br class="hidden sm:inline"/>
+                        <span class="text-gradient-accent">Search Smarter.</span> Explore Rwanda.
+                    </h1>
+
+                    <!-- Supporting Description -->
+                    <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-3xl mx-auto">
+                        <strong class="text-white font-semibold">RWANDA SEARCH</strong> is a Windows desktop search application designed to help users explore information, access useful search categories, and work with a modern search interface.
+                    </p>
+
+                    <!-- CTAs & Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                        <a id="hero-download-btn" href="#download" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold text-base shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-3">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.551H10.949M0 12.45h9.75v9.451L0 20.551m10.949-7.951L24 24V12.45 border-none"/></svg>
+                            Download for Windows
+                        </a>
+                        <a href="#features" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel hover:bg-slate-800 text-slate-200 font-semibold text-base border border-slate-700 hover:border-slate-500 transition-all duration-300 text-center">
+                            Explore Features
+                        </a>
+                    </div>
+
+                    <!-- Technical Specs Metadata Row -->
+                    <div class="pt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-medium text-slate-400">
+                        <span class="flex items-center gap-1.5 px-3 py-1 rounded-md bg-navy-900/80 border border-slate-800">
+                            <svg class="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.551H10.949M0 12.45h9.75v9.451L0 20.551m10.949-7.951L24 24V12.45"/></svg>
+                            Windows Desktop
+                        </span>
+                        <span class="flex items-center gap-1.5 px-3 py-1 rounded-md bg-navy-900/80 border border-slate-800">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10v10H7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v4m6-4v4M9 17v4m6-4v4M3 9h4m-4 6h4m14-6h4m-4 6h4"/></svg>
+                            Version 1.0.0
+                        </span>
+                        <span class="flex items-center gap-1.5 px-3 py-1 rounded-md bg-navy-900/80 border border-slate-800">
+                            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            64-bit Architecture
+                        </span>
+                        <span class="flex items-center gap-1.5 px-3 py-1 rounded-md bg-navy-900/80 border border-slate-800 text-emerald-400 font-semibold">
+                            Free Download
+                        </span>
+                    </div>
+
+                </div>
+
+                <!-- DESKTOP MOCKUP / APP INTERACTIVE PREVIEW -->
+                <div class="mt-14 max-w-5xl mx-auto">
+                    <div class="relative rounded-2xl glass-panel p-2 sm:p-4 border border-cyan-500/20 shadow-2xl glow-cyan">
+                        <!-- Mockup Header / Window Bar -->
+                        <div class="flex items-center justify-between px-4 py-3 bg-navy-900/90 rounded-t-xl border-b border-slate-800">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                                <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                                <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                                <span class="ml-4 text-xs font-mono text-slate-400 hidden sm:inline">RWANDA SEARCH Desktop v1.0.0 — Official Workspace</span>
+                            </div>
+                            <div class="text-xs text-slate-500 font-mono">CSS Interactive Application Preview</div>
+                        </div>
+
+                        <!-- Mockup Application Body -->
+                        <div class="bg-navy-950 rounded-b-xl p-4 sm:p-8 space-y-6">
+                            <!-- Search Bar Mock -->
+                            <div class="max-w-2xl mx-auto relative">
+                                <div class="flex items-center bg-navy-900 border-2 border-cyan-500/50 rounded-xl px-4 py-3 shadow-inner">
+                                    <svg class="w-5 h-5 text-cyan-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                                    <input type="text" readonly value="Kigali Innovation City & Academic Resources" class="bg-transparent text-sm sm:text-base text-white w-full focus:outline-none cursor-default font-mono">
+                                    <span class="text-xs bg-cyan-950 text-cyan-400 px-2 py-1 rounded border border-cyan-800 shrink-0 font-mono">ENTER</span>
+                                </div>
+                            </div>
+
+                            <!-- Category Tabs Mock -->
+                            <div class="flex justify-center gap-2 sm:gap-4 overflow-x-auto py-1 text-xs sm:text-sm font-medium border-b border-slate-800/80">
+                                <button class="px-4 py-2 rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 shrink-0">All Results</button>
+                                <button class="px-4 py-2 rounded-lg text-slate-400 hover:text-white shrink-0">Africa</button>
+                                <button class="px-4 py-2 rounded-lg text-slate-400 hover:text-white shrink-0">Academic</button>
+                                <button class="px-4 py-2 rounded-lg text-slate-400 hover:text-white shrink-0">News</button>
+                                <button class="px-4 py-2 rounded-lg text-slate-400 hover:text-white shrink-0">Technology</button>
+                            </div>
+
+                            <!-- Mock Search Cards Grid -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                                <div class="p-4 rounded-xl bg-navy-900/60 border border-slate-800 space-y-2">
+                                    <div class="text-xs font-mono text-cyan-400">CATEGORY: TECHNOLOGY & RESEARCH</div>
+                                    <h4 class="text-white font-semibold text-sm sm:text-base">Rwanda Tech Hubs & Innovation Ecosystem</h4>
+                                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Comprehensive indexing of software engineering centers, tech incubators, and digital economy initiatives in Rwanda.</p>
+                                </div>
+                                <div class="p-4 rounded-xl bg-navy-900/60 border border-slate-800 space-y-2">
+                                    <div class="text-xs font-mono text-purple-400">CATEGORY: ACADEMIC</div>
+                                    <h4 class="text-white font-semibold text-sm sm:text-base">University of Rwanda Publications & Journals</h4>
+                                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Direct links to research papers, national academic repositories, and open access educational catalogs.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <p class="text-center text-xs text-slate-400 mt-3 font-mono">Note: Interactive mockup representative of the RWANDA SEARCH desktop software interface layout.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section id="features" class="py-20 relative bg-navy-900/50 border-y border-slate-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-mono tracking-widest text-cyan-400 uppercase">Core Capabilities</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Built for Purpose & Clarity</h3>
+                    <p class="text-slate-400 text-base sm:text-lg">Discover the key features integrated into the RWANDA SEARCH desktop application.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Feature Card 1 -->
+                    <div class="glass-card p-8 rounded-2xl space-y-4 relative overflow-hidden group">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">Smart Search Interface</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            A modern, high-contrast user interface engineered specifically for quick queries, intuitive keyboard shortcuts, and clear content presentation.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 2 -->
+                    <div class="glass-card p-8 rounded-2xl space-y-4 relative overflow-hidden group">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">Search Categories</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Organize search results efficiently across curated focus areas including <strong>Africa</strong>, <strong>Academic</strong>, <strong>News</strong>, and <strong>Technology</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="glass-card p-8 rounded-2xl space-y-4 relative overflow-hidden group">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2v1a2 2 0 002 2h2.5M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">Rwanda-Focused Experience</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Tailored explicitly around Rwanda's digital ecosystem and information needs, delivering regional context alongside global search metrics.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 4 -->
+                    <div class="glass-card p-8 rounded-2xl space-y-4 relative overflow-hidden group">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">Data Intelligence</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Utilize integrated tools to analyze query structures, filter relevant information feeds, and parse structured output quickly.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 5 -->
+                    <div class="glass-card p-8 rounded-2xl space-y-4 relative overflow-hidden group">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">Modern Desktop Experience</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Engineered for Windows 64-bit systems as a standalone desktop executable, offering low resource overhead and reliable response times.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 6 -->
+                    <div class="glass-card p-8 rounded-2xl space-y-4 relative overflow-hidden group">
+                        <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">User-Friendly Navigation</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Clean visual layout featuring ergonomic spacing, readable typography, and accessible navigation menus tailored for daily productivity.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREENSHOTS SECTION WITH LIGHTBOX -->
+        <section id="screenshots" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-mono tracking-widest text-cyan-400 uppercase">Visual Overview</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Application Gallery</h3>
+                    <p class="text-slate-400 text-base sm:text-lg">Preview the RWANDA SEARCH application interface. Click any image to open the full-size view.</p>
+                </div>
+
+                <!-- Screenshots Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Item 1 -->
+                    <div class="screenshot-card group cursor-pointer glass-card rounded-xl overflow-hidden border border-slate-800 focus:outline-none" tabindex="0" data-index="0" data-src="https://placehold.co/1280x800/090d16/06b6d4?text=RWANDA+SEARCH+-+Main+Dashboard+View" data-title="Main Dashboard Search View" data-desc="The main search query window displaying search bar, focus buttons, and results overview.">
+                        <div class="relative overflow-hidden aspect-video bg-navy-900">
+                            <img src="https://placehold.co/800x500/090d16/06b6d4?text=RWANDA+SEARCH+-+Main+Dashboard" alt="RWANDA SEARCH Main Dashboard View" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent opacity-80"></div>
+                            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                                <span class="text-xs font-semibold text-white bg-cyan-950/80 border border-cyan-700/50 px-2.5 py-1 rounded-md">Main Dashboard</span>
+                                <span class="text-xs text-slate-300 flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg> Expand</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="screenshot-card group cursor-pointer glass-card rounded-xl overflow-hidden border border-slate-800 focus:outline-none" tabindex="0" data-index="1" data-src="https://placehold.co/1280x800/090d16/3b82f6?text=RWANDA+SEARCH+-+Category+Filters" data-title="Category Search Filters" data-desc="Filtered search view displaying academic, tech, and regional news categories side-by-side.">
+                        <div class="relative overflow-hidden aspect-video bg-navy-900">
+                            <img src="https://placehold.co/800x500/090d16/3b82f6?text=RWANDA+SEARCH+-+Category+Filters" alt="RWANDA SEARCH Category Search Filters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent opacity-80"></div>
+                            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                                <span class="text-xs font-semibold text-white bg-blue-950/80 border border-blue-700/50 px-2.5 py-1 rounded-md">Category Filtering</span>
+                                <span class="text-xs text-slate-300 flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg> Expand</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="screenshot-card group cursor-pointer glass-card rounded-xl overflow-hidden border border-slate-800 focus:outline-none" tabindex="0" data-index="2" data-src="https://placehold.co/1280x800/090d16/8b5cf6?text=RWANDA+SEARCH+-+Settings+%26+Themes" data-title="Application Settings & Customization" data-desc="Desktop settings window allowing theme adjustments, output formatting, and default search scope selections.">
+                        <div class="relative overflow-hidden aspect-video bg-navy-900">
+                            <img src="https://placehold.co/800x500/090d16/8b5cf6?text=RWANDA+SEARCH+-+Settings" alt="RWANDA SEARCH Settings Panel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent opacity-80"></div>
+                            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                                <span class="text-xs font-semibold text-white bg-purple-950/80 border border-purple-700/50 px-2.5 py-1 rounded-md">Settings & Theme</span>
+                                <span class="text-xs text-slate-300 flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg> Expand</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <p class="text-xs text-center text-slate-400 mt-6 font-mono">Developer Note: Replace placeholder images in <code>assets/screenshots/</code> with verified desktop software screenshots before publishing.</p>
+
+            </div>
+        </section>
+
+        <!-- DOWNLOAD SECTION — MAIN CONVERSION HUB -->
+        <section id="download" class="py-20 relative bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950 border-t border-slate-800">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="glass-panel p-8 sm:p-12 rounded-3xl border-2 border-cyan-500/40 glow-cyan relative overflow-hidden text-center space-y-8">
+                    
+                    <!-- Decorative Top Glow -->
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+
+                    <div class="space-y-4">
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-mono bg-cyan-950 text-cyan-300 border border-cyan-700">Official Windows Release</span>
+                        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">Get RWANDA SEARCH for Windows</h2>
+                        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
+                            Download the official RWANDA SEARCH installer and follow the installation instructions to start using the application.
+                        </p>
+                    </div>
+
+                    <!-- Main Software Details Card -->
+                    <div class="max-w-xl mx-auto bg-navy-950/80 rounded-2xl p-6 border border-slate-800 text-left grid grid-cols-2 gap-4 text-xs sm:text-sm">
+                        <div>
+                            <span class="text-slate-400 block font-mono text-[11px]">APPLICATION</span>
+                            <span class="font-bold text-white">RWANDA SEARCH</span>
+                        </div>
+                        <div>
+                            <span class="text-slate-400 block font-mono text-[11px]">VERSION</span>
+                            <span class="font-bold text-cyan-400">1.0.0 (Latest Release)</span>
+                        </div>
+                        <div>
+                            <span class="text-slate-400 block font-mono text-[11px]">TARGET OS</span>
+                            <span class="font-bold text-white">Windows 10 / 11 (64-bit)</span>
+                        </div>
+                        <div>
+                            <span class="text-slate-400 block font-mono text-[11px]">INSTALLER FILE</span>
+                            <span class="font-bold text-slate-300 font-mono text-xs truncate block" title="RWANDA SEARCH Setup 1.0.0.exe">RWANDA SEARCH Setup 1.0.0.exe</span>
+                        </div>
+                    </div>
+
+                    <!-- Main Download Action Button -->
+                    <div class="space-y-4 pt-2">
+                        <a id="main-download-link" href="https://github.com/viateurirasubiza-dotcom/rwanda-search/releases/download/v1.0.0/RWANDA%20SEARCH%20Setup%201.0.0.exe" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-extrabold text-lg shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300 w-full sm:w-auto">
+                            <svg class="w-6 h-6 fill-current animate-bounce" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            Download for Windows (64-bit)
+                        </a>
+
+                        <div>
+                            <a id="all-releases-link" href="https://github.com/viateurirasubiza-dotcom/rwanda-search/releases" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:text-cyan-300 underline underline-offset-4">
+                                View all releases & release notes on GitHub
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Real Download Verification Notice -->
+                    <div class="text-left bg-navy-900/90 rounded-xl p-4 border border-amber-500/30 text-xs text-slate-300 space-y-1">
+                        <div class="flex items-center gap-2 text-amber-400 font-bold">
+                            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            Installer Download Status Notice
+                        </div>
+                        <p>
+                            This download button links directly to the official GitHub Release asset repository. Ensure the release repository tag <code>v1.0.0</code> and file <code>RWANDA SEARCH Setup 1.0.0.exe</code> are compiled and published on GitHub for direct retrieval.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INSTALLATION GUIDE -->
+        <section id="installation" class="py-20 relative bg-navy-900/30">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                
+                <div class="text-center max-w-3xl mx-auto space-y-4">
+                    <h2 class="text-xs font-mono tracking-widest text-cyan-400 uppercase">Setup Walkthrough</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Installation Instructions</h3>
+                    <p class="text-slate-400 text-base">Follow these simple steps to install and launch RWANDA SEARCH on your PC.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+                    
+                    <!-- Step 1 -->
+                    <div class="glass-card p-6 rounded-xl space-y-3 relative">
+                        <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 font-mono font-bold flex items-center justify-center text-sm border border-cyan-500/40">01</span>
+                        <h4 class="text-white font-bold text-base">Download</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Click <strong>Download for Windows</strong> above to download the executable setup.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="glass-card p-6 rounded-xl space-y-3 relative">
+                        <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 font-mono font-bold flex items-center justify-center text-sm border border-cyan-500/40">02</span>
+                        <h4 class="text-white font-bold text-base">Locate File</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Wait for download completion and open your browser's downloads folder.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="glass-card p-6 rounded-xl space-y-3 relative">
+                        <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 font-mono font-bold flex items-center justify-center text-sm border border-cyan-500/40">03</span>
+                        <h4 class="text-white font-bold text-base">Execute Setup</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Double click <code>RWANDA SEARCH Setup 1.0.0.exe</code> to begin installation.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="glass-card p-6 rounded-xl space-y-3 relative">
+                        <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 font-mono font-bold flex items-center justify-center text-sm border border-cyan-500/40">04</span>
+                        <h4 class="text-white font-bold text-base">Wizard</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Follow on-screen prompt prompts in the Windows installation wizard.</p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="glass-card p-6 rounded-xl space-y-3 relative">
+                        <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 font-mono font-bold flex items-center justify-center text-sm border border-cyan-500/40">05</span>
+                        <h4 class="text-white font-bold text-base">Launch</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Launch RWANDA SEARCH directly from your Start Menu or Desktop shortcut.</p>
+                    </div>
+
+                </div>
+
+                <!-- Smart Security Notice Box -->
+                <div class="glass-panel p-6 rounded-2xl border border-blue-500/30 flex flex-col sm:flex-row items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                    </div>
+                    <div class="space-y-1 text-xs sm:text-sm text-slate-300">
+                        <h4 class="text-white font-bold text-base">Windows Defender / SmartScreen Security Note</h4>
+                        <p>
+                            Because RWANDA SEARCH is an independently built executable, Windows SmartScreen may show an <em>"Unknown Publisher"</em> notification. Verify that your installer file was downloaded from the official repository release URL before selecting <strong>"More info" &rarr; "Run anyway"</strong>.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    
+                    <div class="space-y-6">
+                        <span class="text-xs font-mono tracking-widest text-cyan-400 uppercase">About The Project</span>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Built with a Vision for Better Search</h2>
+                        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                            <strong>RWANDA SEARCH</strong> is a desktop search project developed under the <strong class="text-white">VIATEUR HUB</strong> brand, with a focus on a modern search experience and useful information discovery.
+                        </p>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Designed to streamline access to academic repositories, technology news, and regional information resources, the software emphasizes accessibility, clean layout architecture, and efficient desktop utility.
+                        </p>
+                    </div>
+
+                    <!-- Developer Information Card -->
+                    <div class="glass-panel p-8 rounded-3xl border border-slate-800 space-y-6 relative overflow-hidden">
+                        <div class="flex items-center gap-4 border-b border-slate-800 pb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                                VH
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">VIATEUR HUB</h3>
+                                <p class="text-xs font-mono text-cyan-400">Software Brand & Developer</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between py-2 border-b border-slate-800/50">
+                                <span class="text-slate-400">Project Name</span>
+                                <span class="text-white font-semibold">RWANDA SEARCH</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-800/50">
+                                <span class="text-slate-400">Target Platform</span>
+                                <span class="text-white font-semibold">Windows Desktop (64-bit)</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-800/50">
+                                <span class="text-slate-400">GitHub Publisher</span>
+                                <span class="text-cyan-400 font-mono text-xs">viateurirasubiza-dotcom</span>
+                            </div>
+                            <div class="flex justify-between py-2">
+                                <span class="text-slate-400">Source Repository</span>
+                                <a id="about-github-repo" href="https://github.com/viateurirasubiza-dotcom/rwanda-search" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline font-mono text-xs flex items-center gap-1">
+                                    GitHub Repo
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INTERACTIVE DOCUMENTATION TAB (README & LICENSE) -->
+        <section id="docs" class="py-20 bg-navy-900/40 border-t border-slate-800">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <h2 class="text-xs font-mono tracking-widest text-cyan-400 uppercase">Developer Documentation</h2>
+                    <h3 class="text-3xl font-extrabold text-white">Project Specs & Licensing</h3>
+                    <p class="text-slate-400 text-sm">View official repository files included with this project setup.</p>
+                </div>
+
+                <!-- Documentation Box Component -->
+                <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                    <!-- Tab Headers -->
+                    <div class="flex border-b border-slate-800 bg-navy-950">
+                        <button id="tab-readme-btn" class="px-6 py-4 font-mono text-sm font-semibold border-b-2 border-cyan-400 text-cyan-400 bg-navy-900/50 flex items-center gap-2 focus:outline-none">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            README.md
+                        </button>
+                        <button id="tab-license-btn" class="px-6 py-4 font-mono text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white flex items-center gap-2 focus:outline-none">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            LICENSE
+                        </button>
+                    </div>
+
+                    <!-- Tab Content Viewer -->
+                    <div class="p-6 bg-navy-950/90 font-mono text-xs sm:text-sm text-slate-300 overflow-x-auto max-h-[500px] leading-relaxed">
+                        
+                        <!-- README Panel -->
+                        <div id="content-readme" class="space-y-4">
+                            <div class="text-cyan-400 font-bold text-lg border-b border-slate-800 pb-2"># RWANDA SEARCH Website & Release Repository</div>
+                            <p>Official website source code and deployment manual for RWANDA SEARCH Windows Desktop Search Application.</p>
+                            
+                            <div class="text-white font-bold pt-2">## 1. Project Directory Architecture</div>
+                            <pre class="bg-navy-900 p-4 rounded-xl border border-slate-800 text-cyan-300">rwanda-search-website/
+├── index.html            # Main Website Entrypoint
+├── README.md             # Developer & Deployment Instructions
+├── LICENSE               # MIT Open Source License
+├── assets/
+│   ├── logo.svg          # Official Brand SVG Vector Logo
+│   └── screenshots/      # Desktop App UI Screenshots
+└── downloads/
+    └── README.txt        # GitHub Releases Storage Pointer</pre>
+
+                            <div class="text-white font-bold pt-2">## 2. GitHub Pages & Release Deployment Guide</div>
+                            <ol class="list-decimal list-inside space-y-2 text-slate-400">
+                                <li><strong>Repository Setup:</strong> Create a public repository named <code>rwanda-search-website</code> under GitHub account <code>viateurirasubiza-dotcom</code>.</li>
+                                <li><strong>Commit Code:</strong> Push <code>index.html</code>, <code>README.md</code>, and <code>LICENSE</code> to the main branch.</li>
+                                <li><strong>Enable Pages:</strong> Navigate to <em>Settings &rarr; Pages</em>, select <code>main</code> branch root, and save. Website URL: <code>https://viateurirasubiza-dotcom.github.io/rwanda-search-website/</code></li>
+                                <li><strong>Release Publishing:</strong> Create software release tag <code>v1.0.0</code> on the desktop app repository and attach installer asset named <code>RWANDA SEARCH Setup 1.0.0.exe</code>.</li>
+                            </ol>
+                        </div>
+
+                        <!-- LICENSE Panel -->
+                        <div id="content-license" class="hidden space-y-4 text-slate-400">
+                            <div class="text-cyan-400 font-bold text-lg border-b border-slate-800 pb-2">MIT License</div>
+                            <p>Copyright (c) <span class="current-year-placeholder">2026</span> VIATEUR HUB</p>
+                            <p>
+                                Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+                            </p>
+                            <p>
+                                The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+                            </p>
+                            <p>
+                                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 border-t border-slate-800 text-slate-400 text-sm py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4 md:col-span-2">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-cyan-500/20 p-1 border border-cyan-500/40 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-cyan-400 fill-current" viewBox="0 0 24 24"><path d="M4 4h7a4 4 0 0 1 4 4 4 4 0 0 1-4 4H8v6H4V4zm4 5h3a1 1 0 1 0 0-2H8v2z"/></svg>
+                        </div>
+                        <span class="text-lg font-bold text-white tracking-wider">RWANDA SEARCH</span>
+                    </div>
+                    <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+                        RWANDA SEARCH is an official Windows desktop application developed under the VIATEUR HUB brand. Designed for searching information, accessing curated categories, and high-performance desktop exploration.
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="space-y-3">
+                    <h5 class="text-xs font-mono font-bold text-white uppercase tracking-wider">Navigation</h5>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-cyan-400 transition-colors">Home</a></li>
+                        <li><a href="#features" class="hover:text-cyan-400 transition-colors">Features</a></li>
+                        <li><a href="#screenshots" class="hover:text-cyan-400 transition-colors">Screenshots</a></li>
+                        <li><a href="#installation" class="hover:text-cyan-400 transition-colors">Installation Guide</a></li>
+                        <li><a href="#about" class="hover:text-cyan-400 transition-colors">About Developer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: GitHub & Distribution -->
+                <div class="space-y-3">
+                    <h5 class="text-xs font-mono font-bold text-white uppercase tracking-wider">Distribution</h5>
+                    <ul class="space-y-2 text-xs">
+                        <li><a id="footer-download-link" href="#download" class="text-cyan-400 hover:text-cyan-300 font-semibold">Download Setup v1.0.0</a></li>
+                        <li><a id="footer-releases-link" href="https://github.com/viateurirasubiza-dotcom/rwanda-search/releases" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">GitHub Releases</a></li>
+                        <li><a id="footer-repo-link" href="https://github.com/viateurirasubiza-dotcom/rwanda-search" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">Source Code Repository</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Disclaimer & Copyright Bar -->
+            <div class="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs gap-4">
+                <p class="text-slate-400 text-center sm:text-left">
+                    &copy; <span id="current-year">2026</span> <strong class="text-white">VIATEUR HUB</strong>. All rights reserved.
+                </p>
+                <p class="text-slate-400 text-center sm:text-right max-w-md">
+                    Disclaimer: RWANDA SEARCH is a Windows desktop application. This official website hosts product details and distributes installer setup packages via GitHub Releases.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top" type="button" class="fixed bottom-6 right-6 z-40 p-3 rounded-full glass-panel border border-cyan-500/40 text-cyan-400 shadow-xl opacity-0 pointer-events-none transition-all duration-300 hover:bg-cyan-500 hover:text-black focus:outline-none" aria-label="Back to top of page">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+    </button>
+
+    <!-- LIGHTBOX MODAL COMPONENT -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex flex-col items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <div class="relative max-w-5xl w-full flex flex-col items-center">
+            
+            <!-- Lightbox Controls Bar -->
+            <div class="w-full flex items-center justify-between py-3 px-4 bg-navy-900/80 rounded-t-xl border-b border-slate-800">
+                <div>
+                    <h3 id="lightbox-title" class="text-white font-bold text-sm sm:text-base">Screenshot Preview</h3>
+                    <p id="lightbox-desc" class="text-xs text-slate-400 truncate max-w-md"></p>
+                </div>
+                <button id="lightbox-close" type="button" class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 focus:outline-none" aria-label="Close lightbox modal">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+
+            <!-- Lightbox Image Display Container -->
+            <div class="relative bg-navy-950 w-full flex items-center justify-center p-2 rounded-b-xl border border-slate-800 overflow-hidden min-h-[300px]">
+                <img id="lightbox-img" src="" alt="Enlarged Screenshot Preview" class="max-h-[75vh] w-auto object-contain rounded-lg">
+                
+                <!-- Prev/Next Navigation Buttons -->
+                <button id="lightbox-prev" type="button" class="absolute left-4 p-3 rounded-full glass-panel text-white hover:text-cyan-400 focus:outline-none" aria-label="Previous image">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <button id="lightbox-next" type="button" class="absolute right-4 p-3 rounded-full glass-panel text-white hover:text-cyan-400 focus:outline-none" aria-label="Next image">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+
+            <p class="text-xs text-slate-400 mt-2 font-mono">Press <kbd class="px-1.5 py-0.5 bg-slate-800 rounded">ESC</kbd> to exit or use arrow keys to navigate</p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        /**
+         * RWANDA SEARCH — Official Website Logic
+         * Developer: VIATEUR HUB
+         * Configuration & Interactive Handlers
+         */
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. CONFIGURABLE URL PARAMETERS
+            const CONFIG = {
+                githubUsername: 'viateurirasubiza-dotcom',
+                appRepository: 'rwanda-search',
+                websiteRepository: 'rwanda-search-website',
+                version: '1.0.0',
+                installerFileName: 'RWANDA SEARCH Setup 1.0.0.exe'
+            };
+
+            // Compute Release Download URLs dynamically
+            const downloadUrl = `https://github.com/${CONFIG.githubUsername}/${CONFIG.appRepository}/releases/download/v${CONFIG.version}/${encodeURIComponent(CONFIG.installerFileName)}`;
+            const releasesUrl = `https://github.com/${CONFIG.githubUsername}/${CONFIG.appRepository}/releases`;
+            const repoUrl = `https://github.com/${CONFIG.githubUsername}/${CONFIG.appRepository}`;
+
+            // Bind URLs to DOM Elements
+            const mainDownloadBtn = document.getElementById('main-download-link');
+            if (mainDownloadBtn) mainDownloadBtn.href = downloadUrl;
+
+            const allReleasesLink = document.getElementById('all-releases-link');
+            if (allReleasesLink) allReleasesLink.href = releasesUrl;
+
+            const footerReleasesLink = document.getElementById('footer-releases-link');
+            if (footerReleasesLink) footerReleasesLink.href = releasesUrl;
+
+            const footerRepoLink = document.getElementById('footer-repo-link');
+            if (footerRepoLink) footerRepoLink.href = repoUrl;
+
+            const aboutGithubRepo = document.getElementById('about-github-repo');
+            if (aboutGithubRepo) aboutGithubRepo.href = repoUrl;
+
+            // 2. DYNAMIC COPYRIGHT YEAR
+            const yearSpan = document.getElementById('current-year');
+            const currentYear = new Date().getFullYear();
+            if (yearSpan) yearSpan.textContent = currentYear;
+            
+            document.querySelectorAll('.current-year-placeholder').forEach(el => {
+                el.textContent = currentYear;
+            });
+
+            // 3. MOBILE HAMBURGER NAVIGATION
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            function toggleMobileMenu(open) {
+                const isExpanded = open !== undefined ? open : mobileMenu.classList.contains('hidden');
+                if (isExpanded) {
+                    mobileMenu.classList.remove('hidden');
+                    hamburgerIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                    menuBtn.setAttribute('aria-expanded', 'true');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                }
+            }
+
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => toggleMobileMenu());
+            }
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => toggleMobileMenu(false));
+            });
+
+            // 4. BACK TO TOP BUTTON LOGIC
+            const backToTopBtn = document.getElementById('back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                    backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                    backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // 5. SCREENSHOT LIGHTBOX GALLERY LOGIC
+            const screenshotCards = document.querySelectorAll('.screenshot-card');
+            const lightboxModal = document.getElementById('lightbox-modal');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            const lightboxDesc = document.getElementById('lightbox-desc');
+            const lightboxClose = document.getElementById('lightbox-close');
+            const lightboxPrev = document.getElementById('lightbox-prev');
+            const lightboxNext = document.getElementById('lightbox-next');
+
+            let currentScreenshotIndex = 0;
+            const galleryData = Array.from(screenshotCards).map(card => ({
+                src: card.getAttribute('data-src'),
+                title: card.getAttribute('data-title'),
+                desc: card.getAttribute('data-desc')
+            }));
+
+            function openLightbox(index) {
+                currentScreenshotIndex = index;
+                const item = galleryData[currentScreenshotIndex];
+                if (!item) return;
+
+                lightboxImg.src = item.src;
+                lightboxTitle.textContent = item.title;
+                lightboxDesc.textContent = item.desc;
+                lightboxModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightboxModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+
+            function prevScreenshot() {
+                currentScreenshotIndex = (currentScreenshotIndex - 1 + galleryData.length) % galleryData.length;
+                openLightbox(currentScreenshotIndex);
+            }
+
+            function nextScreenshot() {
+                currentScreenshotIndex = (currentScreenshotIndex + 1) % galleryData.length;
+                openLightbox(currentScreenshotIndex);
+            }
+
+            screenshotCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const idx = parseInt(card.getAttribute('data-index'), 10);
+                    openLightbox(idx);
+                });
+
+                card.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        const idx = parseInt(card.getAttribute('data-index'), 10);
+                        openLightbox(idx);
+                    }
+                });
+            });
+
+            if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+            if (lightboxPrev) lightboxPrev.addEventListener('click', prevScreenshot);
+            if (lightboxNext) lightboxNext.addEventListener('click', nextScreenshot);
+
+            // Lightbox Keyboard Navigation
+            document.addEventListener('keydown', (e) => {
+                if (lightboxModal.classList.contains('hidden')) return;
+
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') prevScreenshot();
+                if (e.key === 'ArrowRight') nextScreenshot();
+            });
+
+            // Close Lightbox on Backdrop Click
+            lightboxModal.addEventListener('click', (e) => {
+                if (e.target === lightboxModal) closeLightbox();
+            });
+
+            // 6. INTERACTIVE DOCUMENTATION TAB SWITCHER
+            const readmeBtn = document.getElementById('tab-readme-btn');
+            const licenseBtn = document.getElementById('tab-license-btn');
+            const readmeContent = document.getElementById('content-readme');
+            const licenseContent = document.getElementById('content-license');
+
+            if (readmeBtn && licenseBtn) {
+                readmeBtn.addEventListener('click', () => {
+                    readmeBtn.classList.add('border-cyan-400', 'text-cyan-400', 'bg-navy-900/50');
+                    readmeBtn.classList.remove('border-transparent', 'text-slate-400');
+                    
+                    licenseBtn.classList.remove('border-cyan-400', 'text-cyan-400', 'bg-navy-900/50');
+                    licenseBtn.classList.add('border-transparent', 'text-slate-400');
+
+                    readmeContent.classList.remove('hidden');
+                    licenseContent.classList.add('hidden');
+                });
+
+                licenseBtn.addEventListener('click', () => {
+                    licenseBtn.classList.add('border-cyan-400', 'text-cyan-400', 'bg-navy-900/50');
+                    licenseBtn.classList.remove('border-transparent', 'text-slate-400');
+                    
+                    readmeBtn.classList.remove('border-cyan-400', 'text-cyan-400', 'bg-navy-900/50');
+                    readmeBtn.classList.add('border-transparent', 'text-slate-400');
+
+                    licenseContent.classList.remove('hidden');
+                    readmeContent.classList.add('hidden');
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
